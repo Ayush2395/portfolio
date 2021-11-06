@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,143 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* Main CSS Start here */
+
+:root {
+  --text-color: #d5f6f4;
+  --cream-green: #80e5de;
+  --green: #2bd4c9;
+  --dark-green: #1a7f78;
+  --deep-dark: #092a28;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--deep-dark);
+  font-family: "JetBrains Mono";
+  color: var(--text-color);
+}
+
+.logo {
+  color: var(--text-color);
+  font-family: "Road Rage";
+  position: absolute;
+  left: 130px;
+  top: 20px;
+  font-size: 35px;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  width: 35%;
+  position: absolute;
+  right: 130px;
+  top: 30px;
+  font-size: 20px;
+  color: var(--text-color);
+}
+
+ul a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 5px 15px 5px 15px;
+}
+ul a:hover {
+  background-color: var(--green);
+  color: var(--deep-dark);
+  border-radius: 8px;
+}
+
+.items {
+  display: flex;
+}
+.nav-bar {
+  background-color: var(--deep-dark);
+  /* border: 1px solid white; */
+  height: 100px;
+}
+
+.introduction {
+  transform: translate(760px, 80px);
+  width: 30%;
+}
+.shapes {
+  display: flex;
+  height: 350px;
+  width: 350px;
+  /* background-color: var(--cream-green); */
+  border: 16px solid var(--cream-green);
+  border-radius: 50%;
+  position: absolute;
+  top: 150px;
+  left: 150px;
+}
+.circle {
+  width: 280px;
+  height: 280px;
+  border: 16px solid var(--cream-green);
+  border-radius: 50%;
+}
+
+.star-shape {
+  display: flex;
+  height: 220px;
+  width: 220px;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 420px;
+  right: 120px;
+  transform: rotate(-25deg);
+  animation: rotate 10s linear infinite;
+}
+.rect-1,
+.rect-2 {
+  display: flex;
+  height: 150px;
+  width: 150px;
+  border: 8px solid var(--cream-green);
+  border-radius: 25px;
+  /* animation: rotate 10s linear infinite; */
+}
+.rect-2 {
+  position: absolute;
+  transform: rotate(45deg);
+  /* animation: rotate 10s linear infinite; */
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dash-1 {
+  display: flex;
+  width: 80px;
+  height: 4px;
+  background: var(--dark-green);
+  position: relative;
+  top: 55px;
+}
+.dash-2 {
+  display: flex;
+  width: 120px;
+  height: 4px;
+  background: var(--dark-green);
+  position: relative;
+  top: -60px;
+  right: -180px;
 }
