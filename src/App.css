@@ -38,13 +38,13 @@
 } */
 
 /* Main CSS Start here */
-
 :root {
   --text-color: #d5f6f4;
   --cream-green: #80e5de;
   --green: #2bd4c9;
   --dark-green: #1a7f78;
   --deep-dark: #092a28;
+  --deep-dark-transparent: #092a282d;
 }
 
 * {
