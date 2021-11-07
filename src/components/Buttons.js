@@ -4,7 +4,7 @@ import styled from "styled-components";
 const ButtonStyle = styled.div`
   .btn {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: ${(props) => props.justifyContent};
     width: 30%;
     position: absolute;
     left: 710px;
@@ -14,14 +14,14 @@ const ButtonStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: ${(props) => props.width};
     height: 42px;
     border-radius: 10px;
     border: 4px solid var(--dark-green);
     background-color: ${(props) =>
       props.outline ? "transparent" : "var(--dark-green)"};
     color: var(--text-color);
-    font-size: 25px;
+    font-size: ${(props) => props.fontSize};
     cursor: pointer;
     height: 62px;
     font-family: "JetBrains Mono";
@@ -30,23 +30,35 @@ const ButtonStyle = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 150px;
+    width: ${(props) => props.width};
     height: 42px;
     border-radius: 10px;
     border: 4px solid var(--dark-green);
     background-color: ${(props) =>
       props.outline ? "var(--dark-green)" : "transparent"};
     color: var(--text-color);
-    font-size: 25px;
+    font-size: ${(props) => props.fontSize};
     cursor: pointer;
     height: 62px;
     font-family: "JetBrains Mono";
   }
 `;
 
-export default function Buttons({ outline, btnTextWork, btnTextHire }) {
+export default function Buttons({
+  width,
+  fontSize,
+  justifyContent,
+  outline,
+  btnTextWork,
+  btnTextHire,
+}) {
   return (
-    <ButtonStyle outline={outline}>
+    <ButtonStyle
+      justifyContent={justifyContent}
+      width={width}
+      fontSize={fontSize}
+      outline={outline}
+    >
       <div className="btn">
         <button type="button">{btnTextWork}</button>
         <button type="button">{btnTextHire}</button>

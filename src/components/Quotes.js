@@ -7,29 +7,29 @@ const QuoteStyle = styled.div`
     transform: rotate(-90deg);
     // border: 1px solid white;
     position: absolute;
-    left:-140px;
-    font-size:25px;
-    top:440px;
+    left: -140px;
+    font-size: ${(props) => props.fontSize};
+    top: 440px;
   }
   .right-quotes {
     display: inline-flex;
     transform: rotate(90deg);
     // border: 1px solid white;
     position: absolute;
-    right:-140px;
-    font-size:25px;
-    top:280px;
+    right: -140px;
+    font-size: 25px;
+    top: 280px;
   }
 `;
 
-export default function Quotes(props) {
+export default function Quotes({ fontSize, homeLeftQuotes, homeRightQuotes }) {
   return (
-    <QuoteStyle>
+    <QuoteStyle fontSize={fontSize}>
       <div className="left-quotes">
-        <span>{props.homeLeftQuotes}</span>
+        <span>{homeLeftQuotes}</span>
       </div>
       <div className="right-quotes">
-        <span>{props.homeRightQuotes}</span>
+        <span>{homeRightQuotes}</span>
       </div>
     </QuoteStyle>
   );

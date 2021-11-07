@@ -45,7 +45,7 @@ export default function Home(props) {
   return (
     <BallStyle>
       <Helmet>
-          <title>{props.title}</title>
+        <title>{props.title}</title>
       </Helmet>
       <Introduction />
       <PText />
@@ -79,11 +79,19 @@ export default function Home(props) {
       </div>
 
       <Quotes
+      fontSize={'25px'}
         homeLeftQuotes="<-- Forget About the world,"
         homeRightQuotes="just listen to yourself =>"
       />
 
-      <Buttons outline={false} btnTextWork="My Work" btnTextHire="Hire Me" />
+      <Buttons
+        fontSize={"25px"}
+        justifyContent={"space-evenly"}
+        width={"150px"}
+        outline={false}
+        btnTextWork="My Work"
+        btnTextHire="Hire Me"
+      />
     </BallStyle>
   );
 }
